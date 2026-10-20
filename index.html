@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Norah Alaqeel — Software Engineer · نورة العقيل</title>
+<meta name="description" content="Norah Alaqeel — Software Engineering student at King Saud University. I build software where logic meets people: full-stack apps, AI/NLP, and thoughtful UI/UX.">
+<meta name="author" content="Norah Alaqeel">
+<meta name="theme-color" content="#0C1319">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/norah.jpg">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Norah Alaqeel">
+<meta property="og:title" content="Norah Alaqeel — Software Engineer">
+<meta property="og:description" content="I build software where logic meets people: full-stack apps, AI/NLP, and thoughtful UI/UX. Software Engineering @ King Saud University.">
+<meta property="og:image" content="https://norah-alaqeel.vercel.app/assets/norah.jpg">
+<meta property="og:url" content="https://norah-alaqeel.vercel.app/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Norah Alaqeel — Software Engineer">
+<meta name="twitter:description" content="I build software where logic meets people: full-stack apps, AI/NLP, and thoughtful UI/UX.">
+<meta name="twitter:image" content="https://norah-alaqeel.vercel.app/assets/norah.jpg">
+<script crossorigin src="./vendor/react.production.min.js"></script>
+<script crossorigin src="./vendor/react-dom.production.min.js"></script>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>Norah Alaqeel — نورة العقيل</title>
+<meta name="theme-color" content="#0C1319">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;800;900&amp;family=Figtree:wght@400;500;600&amp;family=DM+Mono:wght@400;500&amp;family=Lalezar&amp;family=IBM+Plex+Sans+Arabic:wght@400;500;600&amp;family=Caveat:wght@500;700&amp;family=Aref+Ruqaa:wght@400;700&amp;display=swap" rel="stylesheet">
+<script src="./image-slot.js"></script>
+<style>
+html{scroll-behavior:smooth}
+body{margin:0;background:#0C1319;color:#F3EADB;font-family:'Figtree',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+a:hover{color:#D9A84E}
+::selection{background:#D9A84E;color:#0C1319}
+</style>
+</helmet>
+
+<div dir="{{ dir }}" style="position:relative;min-height:100vh;overflow-x:hidden;background:#0C1319;color:#F3EADB;font-family:{{ f.body }}">
+
+<div aria-hidden="true" style="position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden">
+  <div style="position:absolute;inset:0;background-image:url(assets/sadu/t30.png);background-size:180px 180px;opacity:.08;mix-blend-mode:screen"></div>
+  <div data-blob="0" style="position:absolute;width:56vmax;height:56vmax;left:-14vmax;top:-16vmax;border-radius:50%;background:radial-gradient(circle,#1F6F6B,rgba(31,111,107,0) 66%);opacity:.75"></div>
+  <div data-blob="1" style="position:absolute;width:48vmax;height:48vmax;right:-16vmax;top:16vh;border-radius:50%;background:radial-gradient(circle,#6B2D5C,rgba(107,45,92,0) 66%);opacity:.8"></div>
+  <div data-blob="2" style="position:absolute;width:42vmax;height:42vmax;left:18vw;bottom:-20vmax;border-radius:50%;background:radial-gradient(circle,#2F8A5F,rgba(47,138,95,0) 66%);opacity:.55"></div>
+  <div data-blob="3" style="position:absolute;width:30vmax;height:30vmax;left:48vw;top:28vh;border-radius:50%;background:radial-gradient(circle,#D9A84E,rgba(217,168,78,0) 66%);opacity:.28"></div>
+  <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 50% 40%,rgba(12,19,25,0) 40%,rgba(12,19,25,.7) 100%)"></div>
+</div>
+
+<nav style="position:fixed;top:16px;left:50%;transform:translateX(-50%);z-index:40;display:flex;align-items:center;gap:6px;padding:6px;border-radius:999px;background:rgba(255,255,255,0.058);backdrop-filter:blur(22px) saturate(180%);-webkit-backdrop-filter:blur(22px) saturate(180%);border:1px solid rgba(255,255,255,.16);box-shadow:inset 0 1px 0 rgba(255,255,255,.22),0 10px 30px rgba(0,0,0,.45);font-size:14px;font-weight:500;white-space:nowrap">
+  <a href="#top" style="display:flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:50%;background:#F3EADB;color:#0C1319;font-family:'Unbounded',sans-serif;font-weight:800;font-size:15px;line-height:1">N</a>
+  <a href="#work" style="padding:9px 14px;border-radius:999px" style-hover="background:rgba(255,255,255,0.108);color:#F3EADB">{{ t.navWork }}</a>
+  <a href="#about" style="padding:9px 14px;border-radius:999px" style-hover="background:rgba(255,255,255,0.108);color:#F3EADB">{{ t.navAbout }}</a>
+  <a href="#contact" style="padding:9px 14px;border-radius:999px;background:#D9A84E;color:#0C1319" style-hover="color:#0C1319;background:#F3EADB">{{ t.navHi }}</a>
+  <button onClick="{{ toggleLang }}" aria-label="Switch language" style="all:unset;cursor:pointer;display:flex;align-items:center;gap:2px;padding:3px;border-radius:999px;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,.16)">
+    <span style="padding:6px 10px;border-radius:999px;font-family:'DM Mono',monospace;font-size:12px;background:{{ enBg }};color:{{ enFg }};transition:background .25s">EN</span>
+    <span style="padding:4px 10px 6px;border-radius:999px;font-family:'IBM Plex Sans Arabic',sans-serif;font-size:13px;font-weight:600;background:{{ arBg }};color:{{ arFg }};transition:background .25s">عربي</span>
+  </button>
+</nav>
+
+<header id="top" data-screen-label="Hero" style="position:relative;z-index:1;box-sizing:border-box;padding:clamp(88px,7.6vw,110px) clamp(14px,4vw,64px) 48px;display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);align-items:center;gap:clamp(10px,4vw,56px)">
+  <div style="display:flex;flex-direction:column;gap:clamp(18px,2.4vw,34px);min-width:0">
+    <div data-hero="" style="display:flex;gap:clamp(6px,0.6vw,8px);flex-wrap:wrap;margin-bottom:clamp(6px,1vw,14px);font-family:{{ f.mono }};font-size:clamp(9px,0.3vw + 8px,12px);letter-spacing:.04em">
+      <span style="white-space:nowrap;padding:7px 12px;border-radius:999px;background:rgba(255,255,255,0.081);border:1px solid rgba(255,255,255,.16);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)">{{ t.chipUni }}</span>
+      <span style="white-space:nowrap;padding:7px 12px;border-radius:999px;background:rgba(255,255,255,0.081);border:1px solid rgba(255,255,255,.16);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)">{{ t.chipCity }}</span>
+      <span style="white-space:nowrap;padding:7px 12px;border-radius:999px;background:linear-gradient(160deg,rgba(243,234,219,.42),rgba(243,234,219,.2));backdrop-filter:blur(18px) saturate(170%);-webkit-backdrop-filter:blur(18px) saturate(170%);border:1px solid rgba(243,234,219,.55);box-shadow:inset 0 1px 0 rgba(255,255,255,.5),0 8px 22px rgba(0,0,0,.3);color:#FFF8EC;display:flex;align-items:center;gap:8px"><span data-pulse="" style="width:7px;height:7px;border-radius:50%;background:#D9A84E"></span>{{ t.chipCoop }}</span>
+    </div>
+    <h1 data-hero="" style="margin:0;font-family:{{ f.display }};font-weight:900;font-size:clamp(30px,11vw,176px);line-height:{{ f.h1lh }};letter-spacing:{{ f.ls }}">{{ t.h1a }}<br><span style="display:inline-block;white-space:nowrap;padding:0 .04em .08em;color:{{ nm.c }};background-image:{{ nm.bg }};-webkit-background-clip:text;background-clip:text;filter:{{ nm.f }};line-height:{{ ch.lh }}">{{ t.h1b }}</span></h1>
+    <span data-hero="" dir="rtl" aria-hidden="true" style="display:{{ accDisp }};align-self:flex-start;margin-top:clamp(-30px,-2vw,-10px);font-family:'Lalezar',sans-serif;font-size:clamp(30px,10vw,160px);line-height:1;transform:rotate(-4deg);background-image:linear-gradient(180deg,#FFF7DD 0%,#F1CF7A 26%,#9C6A22 47%,#F7DE92 60%,#C08A32 80%,#FFE9A8 100%);-webkit-background-clip:text;background-clip:text;color:transparent;white-space:nowrap;padding:0 .06em .1em;filter:drop-shadow(0 2px 0 #6B2D5C) drop-shadow(0 3px 0 #3E1836) drop-shadow(0 16px 22px rgba(0,0,0,.55))">نـــــورة</span>
+    <p data-hero="" style="margin:0;font-size:clamp(13px,0.7vw + 9px,23px);line-height:1.5;max-width:520px;text-wrap:pretty">{{ t.intro }}</p>
+  </div>
+
+  <div data-hero="" style="position:relative;display:flex;align-items:center;justify-content:center;min-height:clamp(160px,48vw,620px);padding-top:clamp(40px,6.25vw,90px);box-sizing:border-box">
+    <div ref="{{ tiltRef }}" style="position:relative;width:min(100%,clamp(130px,36vw,520px));aspect-ratio:1;container-type:inline-size;transform-style:preserve-3d;transition:transform .25s ease-out">
+      <div style="position:absolute;inset:0;border-radius:50%;background:radial-gradient(circle at 30% 25%,rgba(255,255,255,.28),rgba(255,255,255,.06) 45%,rgba(255,255,255,.02) 70%);backdrop-filter:blur(26px) saturate(190%);-webkit-backdrop-filter:blur(26px) saturate(190%);border:1.5px solid rgba(255,255,255,.16);box-shadow:inset 0 1px 0 rgba(255,255,255,.22),inset 0 -14px 40px rgba(217,168,78,.18),inset 10px 0 30px rgba(255,255,255,.25),0 40px 80px rgba(0,0,0,.45)"></div>
+      <div style="position:absolute;bottom:96%;inset-inline-start:2%;z-index:4;width:max-content;max-width:min(300px,62vw);min-width:min(150px,40vw);padding:clamp(6px,2.7cqw,14px) clamp(8px,3.5cqw,18px);border-radius:clamp(11px,4.2cqw,22px);background:rgba(255,255,255,0.1);backdrop-filter:blur(20px) saturate(180%);-webkit-backdrop-filter:blur(20px) saturate(180%);border:1px solid rgba(255,255,255,.2);box-shadow:inset 0 1px 0 rgba(255,255,255,.25),0 12px 30px rgba(0,0,0,.45);height:auto;font-size:clamp(10px,3.1cqw,16px);font-weight:500;line-height:1.35">{{ bubble }}<span aria-hidden="true" style="position:absolute;top:100%;inset-inline-start:clamp(16px,9cqw,46px);width:clamp(8px,3.1cqw,16px);height:clamp(8px,3.1cqw,16px);margin-top:clamp(-8px,-1.55cqw,-4px);transform:rotate(45deg);background:rgba(40,46,52,.92);border-right:1px solid rgba(255,255,255,.2);border-bottom:1px solid rgba(255,255,255,.2)"></span></div>
+      <div data-float="" style="position:absolute;inset:6%">
+        <div onClick="{{ toggleMoji }}" onMouseEnter="{{ mojiIdea }}" onMouseLeave="{{ mojiWave }}" title="hi!" style="position:absolute;inset:0;border-radius:50%;overflow:hidden;background:radial-gradient(circle at 50% 38%,rgba(243,234,219,.16),rgba(243,234,219,.04) 60%,rgba(0,0,0,0) 72%);cursor:pointer;box-shadow:inset 0 0 0 1px rgba(255,255,255,.14),inset 0 -30px 60px rgba(217,168,78,.12)">
+          <img src="assets/memoji4-wave.png" alt="Norah's Memoji waving" draggable="false" style="position:absolute;left:0;top:2.5%;width:100%;height:100%;object-fit:contain;object-position:center bottom;transform-origin:50% 100%;opacity:{{ waveOp }};transform:scale({{ waveSc }}) rotate({{ waveRot }});transition:opacity .45s ease,transform .55s cubic-bezier(.2,.9,.25,1.3)">
+          <img src="assets/memoji4-idea.png" alt="Norah's Memoji with an idea" draggable="false" style="position:absolute;left:0;top:2.5%;width:100%;height:100%;object-fit:contain;object-position:center bottom;transform-origin:50% 100%;opacity:{{ ideaOp }};transform:scale({{ ideaSc }}) rotate({{ ideaRot }});transition:opacity .45s ease,transform .55s cubic-bezier(.2,.9,.25,1.3)">
+        </div>
+      </div>
+      <div style="position:absolute;left:14%;top:7%;width:28%;height:14%;border-radius:50%;background:radial-gradient(ellipse,rgba(255,255,255,.35),rgba(255,255,255,0) 70%);transform:rotate(-30deg);pointer-events:none"></div>
+    </div>
+    
+    <div data-sticker="" style="position:absolute;top:-2%;inset-inline-end:8%;width:clamp(56px,5vw,76px);aspect-ratio:1;cursor:grab;touch-action:none;z-index:3;transform:rotate(8deg);filter:drop-shadow(0 12px 20px rgba(0,0,0,.5))"><div style="position:absolute;inset:0;background:#FFFDF6;clip-path:polygon(50% 0,62% 38%,100% 50%,62% 62%,50% 100%,38% 62%,0 50%,38% 38%)"></div><div style="position:absolute;inset:10%;background:linear-gradient(135deg,#FFF1C2,#D9A84E 45%,#8F5E1E 70%,#F3D37E);clip-path:polygon(50% 0,62% 38%,100% 50%,62% 62%,50% 100%,38% 62%,0 50%,38% 38%)"></div></div>
+    <div style="position:absolute;bottom:8%;inset-inline-end:0;padding:10px 16px;border-radius:999px;background:#5FB38A;color:#0C1319;font-family:'Unbounded',sans-serif;font-size:13px;font-weight:600;transform:rotate(-6deg);box-shadow:0 12px 30px rgba(0,0,0,.45)">AR / EN</div>
+  </div>
+</header>
+
+<section id="work" data-screen-label="Work desktop" style="position:relative;z-index:1;padding:clamp(40px,6vw,100px) clamp(16px,4vw,64px)">
+  <div data-reveal="" style="display:flex;justify-content:space-between;align-items:end;gap:20px;flex-wrap:wrap;margin-bottom:clamp(24px,3vw,40px)">
+    <h2 style="margin:0;font-family:{{ f.display }};font-weight:900;font-size:clamp(44px,7vw,110px);line-height:{{ f.lh }};letter-spacing:{{ f.ls }}">{{ t.workA }} <span style="display: inline-block; color: {{ ch.cG }}; background-image: {{ ch.bg }}; -webkit-background-clip: {{ ch.clip }}; background-clip: {{ ch.clip }}; filter: {{ ch.filter }}; padding-bottom: {{ ch.pb }}; line-height: {{ ch.lh }}">{{ t.workB }}</span></h2>
+    
+  </div>
+  <div data-reveal="" style="border-radius:32px;padding:clamp(20px,3vw,40px);background:rgba(255,255,255,0.05);backdrop-filter:blur(30px) saturate(170%);-webkit-backdrop-filter:blur(30px) saturate(170%);border:1px solid rgba(255,255,255,.16);box-shadow:inset 0 1px 0 rgba(255,255,255,.22),0 30px 70px rgba(0,0,0,.45)">
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,190px),1fr));gap:clamp(20px,3vw,40px) clamp(14px,2vw,28px)">
+      <sc-for list="{{ projects }}" as="p" hint-placeholder-count="6">
+        <button onClick="{{ p.open }}" style="all:unset;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:14px;padding:14px 8px;border-radius:22px;transition:transform .35s cubic-bezier(.2,.8,.2,1.2),background .25s" style-hover="transform:translateY(-8px) rotate(-1.5deg);background:rgba(255,255,255,0.063)">
+          <div dir="ltr" style="position:relative;width:100%;max-width:210px;aspect-ratio:1.22">
+            <div style="position:absolute;left:0;top:0;width:44%;height:22%;border-radius:14px 14px 0 0;background:{{ p.back }}"></div>
+            <div style="position:absolute;left:0;right:0;top:9%;bottom:0;border-radius:4px 16px 16px 16px;background:{{ p.back }}"></div>
+            <div style="position:absolute;left:0;right:0;top:27%;bottom:0;border-radius:16px;overflow:hidden;background:url({{ p.tile }}) center/cover;border:1px solid rgba(255,255,255,.28);box-shadow:inset 0 1px 0 rgba(255,255,255,.4),0 18px 30px rgba(0,0,0,.4)">
+              <span style="position:absolute;inset:0;background:linear-gradient(160deg,rgba(255,255,255,.38),rgba(255,255,255,0) 42%)"></span>
+              <div style="position:absolute;left:8px;right:8px;bottom:8px;display:flex;align-items:center;justify-content:space-between;padding:7px 11px;border-radius:12px;background:rgba(12,19,25,.38);backdrop-filter:blur(14px) saturate(160%);-webkit-backdrop-filter:blur(14px) saturate(160%);border:1px solid rgba(255,255,255,.3);color:#F3EADB">
+                <span style="font-family:'Unbounded',sans-serif;font-weight:800;font-size:clamp(18px,2vw,24px);letter-spacing:-.04em">{{ p.n }}</span>
+                <span style="font-family:{{ f.mono }};font-size:11px">{{ p.count }} {{ p.unit }}</span>
+              </div>
+            </div>
+          </div>
+          <div style="display:flex;flex-direction:column;align-items:center;gap:3px;text-align:center">
+            <span style="font-weight:600;font-size:17px">{{ p.title }}</span>
+            <span style="font-family:{{ f.mono }};font-size:12px;opacity:.65">{{ p.short }}</span>
+          </div>
+        </button>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<section id="about" data-screen-label="About widgets" style="position:relative;z-index:1;padding:clamp(40px,6vw,100px) clamp(16px,4vw,64px)">
+  <h2 data-reveal="" style="margin:0 0 clamp(24px,3vw,40px);font-family:{{ f.display }};font-weight:900;font-size:clamp(44px,7vw,110px);line-height:{{ f.lh }};letter-spacing:{{ f.ls }}">{{ t.aboutA }} <span style="display:inline-block;white-space:nowrap;color:{{ ch.cG }};background-image:{{ ch.bg }};-webkit-background-clip:{{ ch.clip }};background-clip:{{ ch.clip }};filter:{{ ch.filter }};padding-bottom:{{ ch.pb }};line-height:{{ ch.lh }}">{{ t.aboutB }}</span></h2>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:clamp(12px,1.6vw,20px)">
+    <div data-reveal="" style="grid-column:1/-1;border-radius:28px;padding:clamp(24px,3.5vw,48px);background:rgba(255,255,255,0.072);backdrop-filter:blur(26px) saturate(170%);-webkit-backdrop-filter:blur(26px) saturate(170%);border:1px solid rgba(255,255,255,.16);box-shadow:inset 0 1px 0 rgba(255,255,255,.22),0 20px 50px rgba(0,0,0,.45)">
+      <p style="margin:0;white-space:pre-line;font-size:clamp(22px,2.6vw,38px);line-height:1.3;letter-spacing:-.01em;text-wrap:pretty;max-width:1100px">{{ t.bio }} <span style="color:#9FD0C8;font-weight:600">{{ t.bioHi }}</span></p>
+    </div>
+      </div>
+</section><div aria-hidden="true" style="position:relative;z-index:1;height:28px;margin:clamp(20px,4vw,60px) 0 0;background:linear-gradient(135deg,#D9A84E 25%,transparent 25%) -14px 0/28px 28px,linear-gradient(225deg,#D9A84E 25%,transparent 25%) -14px 0/28px 28px,linear-gradient(315deg,#C9653E 25%,transparent 25%) 0 0/28px 28px,linear-gradient(45deg,#C9653E 25%,transparent 25%) 0 0/28px 28px;opacity:.55"></div>
+
+<section id="play" ref="{{ playRef }}" data-screen-label="Wordle challenge" style="position:relative;z-index:1;padding:clamp(60px,8vw,120px) clamp(16px,4vw,64px)">
+  <div data-reveal="" style="display:flex;flex-direction:column;gap:12px;margin-bottom:clamp(28px,4vw,48px)">
+    <h2 style="margin: 0; font-family: {{ f.display }}; font-weight: 900; font-size: clamp(44px,7vw,110px); line-height: {{ f.lh }}; letter-spacing: {{ f.ls }}; max-width: 100%">{{ t.playA }} <span style="display:inline-block;white-space:nowrap;color:{{ ch.cG }};background-image:{{ ch.bg }};-webkit-background-clip:{{ ch.clip }};background-clip:{{ ch.clip }};filter:{{ ch.filter }};padding-bottom:{{ ch.pb }};line-height:{{ ch.lh }}">{{ t.playB }}</span></h2>
+    <span style="font-family: {{ f.mono }}; font-size: 13px; color: #9FD0C8">{{ t.whyKick }}</span>
+    <p style="margin:0;font-size:clamp(20px,2vw,28px);line-height:1.4;max-width:820px;text-wrap:pretty">{{ t.whyLine }}</p>
+    
+    <p style="margin:6px 0 0;font-size:clamp(16px,1.4vw,19px);line-height:1.5;max-width:680px;opacity:.75">{{ t.playSub }}</p>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:clamp(20px,3vw,40px);align-items:start">
+    <div data-reveal="" dir="ltr" style="border-radius:30px;padding:clamp(18px,3vw,32px);background:rgba(255,255,255,0.06);backdrop-filter:blur(28px) saturate(170%);-webkit-backdrop-filter:blur(28px) saturate(170%);border:1px solid rgba(255,255,255,.16);box-shadow:inset 0 1px 0 rgba(255,255,255,.22),0 30px 70px rgba(0,0,0,.45);display:flex;flex-direction:column;align-items:center;gap:18px">
+      <div dir="{{ dir }}" style="display:flex;flex-direction:column;align-items:center;gap:4px;text-align:center">
+        <span style="font-size:15px;font-weight:600;color:#F1CF7A;text-wrap:balance">{{ t.dailyLine }}</span>
+        <span style="font-family:{{ f.mono }};font-size:12px;opacity:.6">{{ t.nextIn }}{{ countdown }}</span>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:7px">
+        <sc-for list="{{ rows }}" as="r" hint-placeholder-count="6">
+          <div data-row="{{ r.i }}" style="display:flex;gap:7px">
+            <sc-for list="{{ r.cells }}" as="c" hint-placeholder-count="6">
+              <span style="width:clamp(42px,6vw,58px);aspect-ratio:1;box-sizing:border-box;display:flex;align-items:center;justify-content:center;border-radius:10px;font-family:'Unbounded',sans-serif;font-weight:800;font-size:clamp(18px,2.4vw,26px);background:{{ c.bg }};color:{{ c.fg }};border:2px solid {{ c.bd }};transition:background .3s,border-color .2s">{{ c.l }}</span>
+            </sc-for>
+          </div>
+        </sc-for>
+      </div>
+      <span style="min-height:22px;font-family:{{ f.body }};font-size:15px;font-weight:600;color:#F1CF7A;text-align:center" dir="{{ dir }}">{{ msg }}</span>
+      <div style="display:flex;flex-direction:column;gap:6px;width:100%;max-width:520px">
+        <sc-for list="{{ kb }}" as="row" hint-placeholder-count="3">
+          <div style="display:flex;gap:5px;justify-content:center">
+            <sc-for list="{{ row }}" as="k" hint-placeholder-count="9">
+              <button onClick="{{ k.press }}" style="all:unset;cursor:pointer;flex:{{ k.flex }};min-width:0;height:48px;display:flex;align-items:center;justify-content:center;border-radius:9px;font-family:'Figtree',sans-serif;font-weight:600;font-size:{{ k.fs }};background:{{ k.bg }};color:{{ k.fg }};transition:transform .1s" style-active="transform:scale(.93)">{{ k.label }}</button>
+            </sc-for>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:clamp(16px,2vw,24px)">
+      
+      <div data-reveal="" style="border-radius:24px;padding:22px;background:rgba(255,255,255,0.06);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,.16);display:flex;flex-direction:column;gap:12px">
+        <span style="font-family:{{ f.mono }};font-size:12px;opacity:.6">{{ t.rulesTitle }}</span>
+        <div style="display:flex;flex-direction:column;gap:10px;font-size:15px;line-height:1.45">
+          <span style="display:flex;gap:10px;align-items:center"><span style="flex:none;width:22px;height:22px;border-radius:6px;background:#2F8A5F"></span>{{ t.ruleG }}</span>
+          <span style="display:flex;gap:10px;align-items:center"><span style="flex:none;width:22px;height:22px;border-radius:6px;background:#D9A84E"></span>{{ t.ruleY }}</span>
+          <span style="display:flex;gap:10px;align-items:center"><span style="flex:none;width:22px;height:22px;border-radius:6px;background:rgba(255,255,255,.12)"></span>{{ t.ruleX }}</span>
+        </div>
+        <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:6px">
+          <button onClick="{{ undo }}" style="all:unset;cursor:pointer;padding:11px 16px;border-radius:999px;background:rgba(159,208,200,.16);border:1px solid rgba(159,208,200,.45);color:#CFEAE5;font-family:'DM Mono',monospace;font-weight:500;font-size:13px" style-hover="background:rgba(159,208,200,.28)">{{ undoLabel }}</button>
+          <button onClick="{{ showHint }}" style="all:unset;cursor:pointer;padding:11px 16px;border-radius:999px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);font-weight:600;font-size:14px" style-hover="background:rgba(255,255,255,.18)">{{ t.hintBtn }}</button>
+          <button onClick="{{ newWord }}" style="all:unset;cursor:pointer;padding:11px 16px;border-radius:999px;background:#D9A84E;color:#0C1319;font-weight:700;font-size:14px" style-hover="background:#F1CF7A">{{ t.newWord }}</button>
+        </div>
+        <sc-if value="{{ hintOn }}" hint-placeholder-val="{{ false }}">
+          <span style="font-size:15px;color:#9FD0C8">{{ hintText }}</span>
+        </sc-if>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section data-screen-label="Skills" style="position:relative;z-index:1;padding:clamp(40px,6vw,100px) clamp(16px,4vw,64px)">
+  <h2 data-reveal="" style="margin:0 0 clamp(24px,3vw,40px);font-family:{{ f.display }};font-weight:900;font-size:clamp(44px,7vw,110px);line-height:{{ f.lh }};letter-spacing:{{ f.ls }}">{{ t.toolA }}<span style="display: inline-block; color: {{ ch.cG }}; background-image: {{ ch.bg }}; -webkit-background-clip: {{ ch.clip }}; background-clip: {{ ch.clip }}; filter: {{ ch.filter }}; padding-bottom: {{ ch.pb }}; line-height: {{ ch.lh }}">{{ t.toolB }}</span></h2>
+  <div style="display:flex;flex-direction:column;gap:clamp(18px,2vw,28px)">
+    <sc-for list="{{ skills }}" as="g" hint-placeholder-count="4">
+      <div data-reveal="" style="display:flex;flex-wrap:wrap;gap:10px 16px;align-items:flex-start">
+        <span style="flex:0 0 180px;max-width:100%;font-family:{{ f.mono }};font-size:13px;padding-top:12px">{{ g.title }}</span>
+        <div dir="ltr" style="flex:1 1 320px;min-width:0;display:flex;flex-wrap:wrap;gap:8px;justify-content:{{ g.justify }}">
+          <sc-for list="{{ g.items }}" as="s" hint-placeholder-count="6">
+            <span style="padding:10px 16px;border-radius:999px;background:{{ s.bg }};backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid {{ s.bd }};box-shadow:{{ s.sh }};color:{{ s.fg }};font-family:'Figtree',sans-serif;font-size:16px;font-weight:{{ s.fw }};transition:transform .25s cubic-bezier(.2,.8,.2,1.4),background .2s" style-hover="transform:translateY(-3px) scale(1.05);background:#D9A84E;color:#0C1319">{{ s.n }}</span>
+          </sc-for>
+        </div>
+      </div>
+    </sc-for>
+  </div>
+</section>
+
+<footer id="contact" data-screen-label="Contact" style="position:relative;z-index:1;padding:clamp(80px,10vw,160px) clamp(16px,4vw,64px) 40px;display:flex;flex-direction:column;align-items:center;gap:clamp(28px,4vw,48px);text-align:center">
+  
+  
+  <h2 data-reveal="" style="margin:0;font-family:{{ f.display }};font-weight:900;font-size:clamp(40px,7.6vw,124px);line-height:{{ f.lh }};letter-spacing:{{ f.ls }};max-width:100%;overflow-wrap:break-word">{{ t.contactA }}<br><span style="display: inline-block; color: {{ ch.cT }}; background-image: {{ ch.bg }}; -webkit-background-clip: {{ ch.clip }}; background-clip: {{ ch.clip }}; filter: {{ ch.filter }}; padding-bottom: {{ ch.pb }}; line-height: {{ ch.lh }}">{{ t.contactB }}</span></h2>
+  <div data-reveal="" style="display:flex;gap:clamp(6px,0.7vw,10px);flex-wrap:wrap;justify-content:center;max-width:100%;box-sizing:border-box;padding:clamp(6px,0.7vw,10px);border-radius:clamp(20px,2.1vw,30px);background:rgba(255,255,255,0.058);backdrop-filter:blur(24px) saturate(180%);-webkit-backdrop-filter:blur(24px) saturate(180%);border:1px solid rgba(255,255,255,.16);box-shadow:inset 0 1px 0 rgba(255,255,255,.22),0 20px 50px rgba(0,0,0,.45)">
+    <a href="mailto:Norahsulialaqeel@gmail.com" style="display:inline-flex;align-items:center;justify-content:center;min-height:44px;box-sizing:border-box;padding:clamp(10px,1.1vw,16px) clamp(14px,1.55vw,22px);border-radius:clamp(14px,1.55vw,22px);background:#D9A84E;color:#0C1319;font-weight:600;font-size:clamp(13px,0.55vw + 8px,16px);font-family:'Figtree',sans-serif;transition:transform .25s cubic-bezier(.2,.8,.2,1.4)" style-hover="color:#fff;transform:translateY(-6px) scale(1.06)">Norahsulialaqeel@gmail.com</a>
+    <a href="https://linkedin.com/in/norah-alaqeel" target="_blank" style="display:inline-flex;align-items:center;justify-content:center;min-height:44px;box-sizing:border-box;padding:clamp(10px,1.1vw,16px) clamp(14px,1.55vw,22px);border-radius:clamp(14px,1.55vw,22px);background:rgba(255,255,255,0.126);font-weight:600;font-size:clamp(13px,0.55vw + 8px,16px);font-family:'Figtree',sans-serif;transition:transform .25s cubic-bezier(.2,.8,.2,1.4)" style-hover="color:#F3EADB;transform:translateY(-6px) scale(1.06)">LinkedIn ↗</a>
+    <a href="https://github.com/nouraalaqeel" target="_blank" style="display:inline-flex;align-items:center;justify-content:center;min-height:44px;box-sizing:border-box;padding:clamp(10px,1.1vw,16px) clamp(14px,1.55vw,22px);border-radius:clamp(14px,1.55vw,22px);background:#F3EADB;color:#0C1319;font-weight:600;font-size:clamp(13px,0.55vw + 8px,16px);font-family:'Figtree',sans-serif;transition:transform .25s cubic-bezier(.2,.8,.2,1.4)" style-hover="color:#0C1319;transform:translateY(-6px) scale(1.06)">GitHub ↗</a>
+  </div>
+  <span style="font-family:{{ f.mono }};font-size:12px;opacity:.6">{{ t.copy }}</span>
+</footer>
+
+<sc-if value="{{ isOpen }}" hint-placeholder-val="{{ false }}">
+  <div onClick="{{ close }}" style="position:fixed;inset:0;z-index:60;background:rgba(8,7,8,.6);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);display:flex;align-items:center;justify-content:center;padding:clamp(0px,3vw,40px)">
+    <div ref="{{ winRef }}" onClick="{{ stop }}" data-screen-label="Project window" style="width:min(1240px,100%);max-height:100%;overflow-y:auto;overflow-x:hidden;border-radius:clamp(0px,2vw,30px);background:rgba(16,26,32,.72);backdrop-filter:blur(40px) saturate(190%);-webkit-backdrop-filter:blur(40px) saturate(190%);border:1px solid rgba(255,255,255,.16);box-shadow:inset 0 1px 0 rgba(255,255,255,.22),0 40px 100px rgba(0,0,0,.45)">
+      <div style="position:sticky;top:0;z-index:2;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 18px;background:rgba(12,19,25,.6);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid rgba(255,255,255,.16)">
+        <span dir="ltr" style="font-family:'DM Mono',monospace;font-size:13px;opacity:.75">~/norah/work/{{ cur.slug }}</span>
+        <div dir="ltr" style="display:flex;gap:6px">
+          <button onClick="{{ prev }}" style="all:unset;cursor:pointer;width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,0.126);font-size:16px" style-hover="background:#F3EADB;color:#0C1319">←</button>
+          <button onClick="{{ next }}" style="all:unset;cursor:pointer;width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,0.126);font-size:16px" style-hover="background:#F3EADB;color:#0C1319">→</button>
+          <button onClick="{{ close }}" style="all:unset;cursor:pointer;height:36px;padding:0 14px;border-radius:999px;display:flex;align-items:center;background:#F3EADB;color:#0C1319;font-size:13px;font-weight:600" style-hover="background:#D9A84E;color:#0C1319">{{ t.close }}</button>
+        </div>
+      </div>
+      <div style="padding:clamp(22px,3.5vw,48px);display:flex;flex-direction:column;gap:clamp(22px,3vw,36px)">
+        <div style="display:flex;flex-direction:column;gap:12px">
+          <span style="font-family:{{ f.mono }};font-size:13px;color:#9FD0C8">{{ cur.n }} — {{ cur.kind }}</span>
+          <h3 style="margin:0;font-family:{{ f.display }};font-weight:900;font-size:clamp(40px,7vw,104px);line-height:{{ f.lh }};letter-spacing:{{ f.ls }}">{{ cur.title }}</h3>
+        </div>
+        <sc-if value="{{ cur.hasScreens }}" hint-placeholder-val="{{ true }}">
+        <div style="display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:8px;min-width:0">
+          <sc-for list="{{ cur.screens }}" as="s" hint-placeholder-count="3">
+            <div style="flex:none;height:clamp(340px,68vh,700px);width:calc(clamp(340px,68vh,700px) * {{ s.wr }});min-width:0;scroll-snap-align:start;position:relative">
+              <image-slot id="{{ s.id }}" shape="rounded" radius="{{ s.radius }}" src="{{ s.src }}" fit="contain" placeholder="{{ s.ph }}"></image-slot>
+            </div>
+          </sc-for>
+        </div>
+        </sc-if>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:clamp(16px,2vw,28px)">
+          <div style="border-radius:22px;padding:22px;background:linear-gradient(160deg,rgba(129,216,208,.34),rgba(10,186,181,.16));backdrop-filter:blur(20px) saturate(180%);-webkit-backdrop-filter:blur(20px) saturate(180%);border:1px solid rgba(129,216,208,.6);box-shadow:inset 0 1px 0 rgba(220,255,250,.45),0 0 26px rgba(10,186,181,.22),0 14px 34px rgba(0,0,0,.35);color:#E9FFFC;display:flex;flex-direction:column;gap:8px">
+            <span style="font-family:{{ f.mono }};font-size:12px;color:#81D8D0">{{ t.role }}</span>
+            <span style="font-size:20px;font-weight:600;line-height:1.4">{{ cur.role }}</span>
+          </div>
+          <div style="border-radius:22px;padding:22px;background:rgba(255,255,255,0.06);backdrop-filter:blur(20px) saturate(170%);-webkit-backdrop-filter:blur(20px) saturate(170%);border:1px solid rgba(255,255,255,.16);box-shadow:inset 0 1px 0 rgba(255,255,255,.2),0 14px 34px rgba(0,0,0,.35);display:flex;flex-direction:column;gap:8px">
+            <span style="font-family:{{ f.mono }};font-size:12px;opacity:.6">{{ t.what }}</span>
+            <span style="font-size:17px;line-height:1.6">{{ cur.what }}</span>
+          </div>
+          <sc-if value="{{ cur.did }}" hint-placeholder-val="{{ true }}">
+            <div style="border-radius:22px;padding:22px;background:rgba(255,255,255,0.06);backdrop-filter:blur(20px) saturate(170%);-webkit-backdrop-filter:blur(20px) saturate(170%);border:1px solid rgba(255,255,255,.16);box-shadow:inset 0 1px 0 rgba(255,255,255,.2),0 14px 34px rgba(0,0,0,.35);display:flex;flex-direction:column;gap:8px">
+              <span style="font-family:{{ f.mono }};font-size:12px;opacity:.6">{{ t.did }}</span>
+              <span style="font-size:17px;line-height:1.6">{{ cur.did }}</span>
+            </div>
+          </sc-if>
+        </div>
+        <div dir="ltr" style="display:flex;flex-wrap:wrap;gap:8px;justify-content:{{ tagJustify }}">
+          <sc-for list="{{ cur.tech }}" as="tg" hint-placeholder-count="4">
+            <span style="padding:8px 14px;border-radius:999px;background:rgba(255,255,255,0.135);border:1px solid rgba(255,255,255,.16);font-family:'DM Mono',monospace;font-size:13px">{{ tg }}</span>
+          </sc-for>
+        </div>
+        <sc-if value="{{ cur.pdf }}" hint-placeholder-val="{{ false }}">
+          <div dir="ltr" ref="{{ pdfRef }}" data-screen-label="Keeta case study" style="width:min(100%,820px);margin:clamp(4px,1.5vw,16px) auto 0;border-radius:clamp(12px,1.6vw,22px);overflow:hidden;background:rgba(255,255,255,.04);box-shadow:0 30px 70px rgba(0,0,0,.4);display:flex;flex-direction:column;min-height:200px"></div>
+        </sc-if>
+      </div>
+    </div>
+  </div>
+</sc-if>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;motion&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;}}">
+class Component extends DCLogic {
+  playRef = React.createRef();
+  WORDS = [["PYTHON","First in my toolkit","أول مهارة في قسم الأدوات"],["STRIPE","How SouqPlus gets paid","نظام الدفع في SouqPlus"],["RIYADH","Where I’m based, top of the page","مدينتي، فوق في أول الصفحة"],["PEOPLE","Logic meets ___","المنطق يلتقي بـ ___ (بالإنجليزي)"],["SPRINT","SouqPlus shipped in four Agile ___s","SouqPlus انبنى على أربع ___ Agile"],["ARABIC","The other language in StudyGenie’s NLP pipeline","اللغة الثانية في خط معالجة StudyGenie"],["PAYOUT","Automatic ___s for SouqPlus sellers","تحويلات البائعين التلقائية في SouqPlus"],["SURVEY","Where Glowry’s research started","من هنا بدأ بحث Glowry"],["DESIGN","What I do in Figma","اللي أسويه في Figma"],["REPLAY","The attack my OAuth state mechanism blocks","الهجوم اللي تمنعه آلية OAuth state"],["PARENT","One of the four School Library roles","واحد من أدوار مكتبة المدرسة الأربعة"],["SALONS","What Glowry helps you book","اللي يساعدك Glowry تحجزينه"],["FILTER","Added to SouqPlus listings with categories","انضافت لإعلانات SouqPlus مع التصنيفات"],["PANDAS","Not the animal. Check AI & Data","مو الحيوان. شوف قسم AI & Data"],["SELLER","The SouqPlus role Stripe Connect onboards","الدور اللي يسجّله Stripe Connect في SouqPlus"],["SCREEN","School Library has 45+ of these","مكتبة المدرسة فيها أكثر من 45 منها"],["PROMPT","What you type to an AI, in my toolkit","اللي تكتبه للذكاء الاصطناعي، موجود في الأدوات"],["WORDLE","You’re playing it","أنت تلعبها الحين"],["SCHOOL","Library, but for a ___","مكتبة ___ (بالإنجليزي)"],["MOBILE","SouqPlus is a C2C ___ marketplace","SouqPlus سوق C2C على الـ ___"],["FOLDER","Every project lives in one","كل مشروع ساكن في واحد منها"],["MARKET","Glowry was designed for the Saudi ___","Glowry مصمم للـ ___ السعودي"],["SYSTEM","School Library is a library management ___","مكتبة المدرسة: library management ___"],["MODULE","I added filters to the SouqPlus Listings ___","أضفت الفلاتر لـ Listings ___ في SouqPlus"],["LETTER","This word has six of them","هالكلمة فيها ستة منها"],["GITHUB","Where my code lives, see contact","وين ساكن كودي، شوف قسم التواصل"]];
+  dayIndex() { return Math.floor((Date.now() + 3 * 36e5) / 864e5); }
+  state = { open: -1, b: 0, toast: false, moji: 0, g: [], cur: '', wi: Math.floor((Date.now() + 3 * 36e5) / 864e5) % this.WORDS.length, now: Date.now(), msg: '', done: false, hintOn: false, stats: (() => { try { return JSON.parse(localStorage.getItem('norah-wordle')) || { p: 0, w: 0, s: 0 }; } catch (e) { return { p: 0, w: 0, s: 0 }; } })(), lang: (() => { try { return localStorage.getItem('norah-lang') || 'en'; } catch (e) { return 'en'; } })() };
+  tiltRef = React.createRef();
+  winRef = React.createRef();
+  colors = [
+    { back:'#1B7C79', tile:'assets/sadu/t35.png' },
+    { back:'#8E3F22', tile:'assets/sadu/t33.png' },
+    { back:'#4A3F8C', tile:'assets/sadu/t31.png' },
+    { back:'#6E5420', tile:'assets/sadu/t30.png' },
+    { back:'#5A2350', tile:'assets/sadu/t34.png' },
+    { back:'#2C6B35', tile:'assets/sadu/t32.png' }
+  ];
+  P = [
+    { slug:'studygenie', n:'01',
+      en:{ title:'StudyGenie', kind:'Graduation Project · AI Study Companion',
+        role:'Built the Arabic/English NLP pipeline and worked on model fine-tuning.',
+        what:'A bilingual platform that turns course PDFs into summaries, quizzes and flashcards using a fine-tuned Qwen2.5 + LoRA model served over FastAPI with PostgreSQL.',
+        did:'Built the full NLP preprocessing pipeline behind every AI feature — PDF text extraction, OCR (Tesseract), Arabic normalization, sentence segmentation, and chunking — plus Qwen2.5 + LoRA fine-tuning (PEFT).' },
+      ar:{ title:'StudyGenie', kind:'مشروع التخرج · رفيق دراسة بالذكاء الاصطناعي',
+        role:'بنيت خط معالجة اللغة العربية والإنجليزية وعملت على ضبط النموذج.',
+        what:'منصة ثنائية اللغة تحوّل ملفات PDF للمقررات إلى ملخصات واختبارات وبطاقات مراجعة، باستخدام نموذج Qwen2.5 + LoRA مضبوط يعمل عبر FastAPI مع PostgreSQL.',
+        did:'بنيت خط المعالجة المسبقة الكامل خلف كل ميزة ذكاء اصطناعي — استخراج النص من PDF، والتعرّف الضوئي (Tesseract)، وتوحيد النص العربي، وتقسيم الجمل، والتجزئة — إضافة إلى ضبط Qwen2.5 + LoRA ‏(PEFT).' },
+      tech:['Python','FastAPI','Qwen2.5 + LoRA','NLP','PostgreSQL'],
+      screens:[['w-sg-1','4/5','StudyGenie — 1'],['w-sg-2','4/5','StudyGenie — 2'],['w-sg-3','4/5','StudyGenie — 3'],['w-sg-4','4/5','StudyGenie — 4']] },
+    { slug:'souqplus', n:'02',
+      en:{ title:'SouqPlus', kind:'Cross-Platform Marketplace App', role:'Payments and backend.',
+        what:'A C2C mobile marketplace built in Flutter with four user roles, delivered across four Agile sprints covering the whole software cycle (build + maintenance).',
+        did:'Designed and built the entire payment system — Stripe checkout, Stripe Connect seller onboarding over OAuth, automatic payouts, and a single-use, time-bound OAuth state mechanism that blocks replay attacks. In the maintenance phase I documented the database structure and delivered a perfective maintenance request adding categories and filters to the Listings module.' },
+      ar:{ title:'SouqPlus', kind:'تطبيق سوق متعدد المنصات', role:'المدفوعات والواجهة الخلفية.',
+        what:'سوق إلكتروني بين المستخدمين (C2C) مبني بـ Flutter بأربعة أدوار، سُلّم عبر أربع دورات Agile تغطي دورة حياة البرمجيات كاملة (بناء وصيانة).',
+        did:'صمّمت وبنيت نظام الدفع بالكامل — الدفع عبر Stripe، وتسجيل البائعين في Stripe Connect عبر OAuth، والتحويلات التلقائية، وآلية OAuth state أحادية الاستخدام ومحدودة بوقت تمنع هجمات إعادة الإرسال. وفي مرحلة الصيانة وثّقت هيكل قاعدة البيانات ونفّذت طلب صيانة تحسينية أضاف التصنيفات والفلاتر إلى وحدة الإعلانات.' },
+      tech:['Flutter','Dart','Firebase','Stripe Connect','OAuth 2.0'],
+      screens:[['w-sp-1','4/5','SouqPlus — 1'],['w-sp-2','4/5','SouqPlus — 2'],['w-sp-3','4/5','SouqPlus — 3'],['w-sp-4','4/5','SouqPlus — 4']] },
+    { slug:'school-library', n:'03',
+      en:{ title:'School Library System', kind:'UI/UX Design', role:'I designed the ENTIRE UI myself.',
+        what:'A complete library management system — 45+ high-fidelity screens across four roles (student, child, parent, librarian), with full flows, wireframes, and prototypes in Figma, designed around how each user actually moves through the system.', did:'' },
+      ar:{ title:'نظام مكتبة المدرسة', kind:'تصميم UI/UX', role:'صمّمت واجهة النظام كاملة بنفسي.',
+        what:'نظام متكامل لإدارة المكتبة — أكثر من 45 شاشة عالية الدقة لأربعة أدوار (طالب، طفل، ولي أمر، أمين مكتبة)، مع مسارات كاملة وإطارات سلكية ونماذج أولية في Figma، مصممة حول طريقة تنقّل كل مستخدم فعليًا في النظام.', did:'' },
+      tech:['Figma','User Research','Wireframing','Prototyping','User-Centered Design'],
+      screens:[['w-lib-1','4/5','School Library — 1'],['w-lib-2','4/5','School Library — 2'],['w-lib-3','4/5','School Library — 3'],['w-lib-4','4/5','School Library — 4']] },
+    { slug:'keeta', n:'04', pdf:'assets/keeta-case-study.pdf',
+      en:{ title:'Keeta UX/UI Redesign', kind:'Redesigning the Keeta App Experience', role:'UX Research & UI Design',
+        what:'An independent UX/UI concept redesign of Keeta’s food ordering experience, focused on clarity and usability.',
+        did:'Analyzed the existing interfaces and public user feedback, identified UX issues, and developed proposed design solutions.' },
+      ar:{ title:'كيتا: إعادة تصميم UX/UI', kind:'إعادة تصميم تجربة تطبيق كيتا', role:'بحث تجربة المستخدم وتصميم الواجهات',
+        what:'إعادة تصميم تجربة طلب الطعام في تطبيق كيتا لتحسين الوضوح وسهولة الاستخدام.',
+        did:'حللت واجهات التطبيق وآراء المستخدمين وحددت مشكلات تجربة الاستخدام واقترحت حلولا وتصاميم جديدة.' },
+      tech:['UX Research','UI Design','Figma','Information Architecture','Wireframing'],
+      screens:[] },
+    { slug:'glowry', n:'05',
+      en:{ title:'Glowry', kind:'HCI / Product Design · team of 7',
+        role:'Part of a 7-person team taking the product through full HCI design milestones (research, ideation, wireframes, prototype, usability evaluation).', what:'A beauty and salon booking app designed for the Saudi market: find a salon, compare services and prices, and book in one place instead of scattered Instagram and WhatsApp chats. Grounded in a user survey, interviews and personas, then tested for clarity.', did:'' },
+      ar:{ title:'Glowry', kind:'تفاعل الإنسان والحاسب · فريق من 7',
+        role:'ضمن فريق من 7 أشخاص أخذ المنتج عبر كل مراحل تصميم HCI (البحث، توليد الأفكار، الإطارات السلكية، النموذج الأولي، تقييم قابلية الاستخدام).', what:'تطبيق حجز صالونات ومراكز تجميل مصمم للسوق السعودي: تلاقين الصالون، تقارنين الخدمات والأسعار، وتحجزين من مكان واحد بدل محادثات إنستقرام وواتساب المتفرقة. مبني على استبيان ومقابلات وشخصيات مستخدمين، ومختبر للوضوح.', did:'' },
+      tech:['Figma','UX Research','Usability Testing'],
+      screens:[['w-gl-1','4/5','Glowry — 1'],['w-gl-2','4/5','Glowry — 2'],['w-gl-3','4/5','Glowry — 3'],['w-gl-4','4/5','Glowry — 4']] },
+    { slug:'naqd', n:'06',
+      en:{ title:'Naqd', kind:'Fintech UX Case Study · team of 3', role:'UX research and design on a fintech concept from the Nasq/Nusuq bootcamp.', what:'A UI/UX case study rethinking how money transfers work in Saudi fintech apps. We studied the friction in apps like STC Pay and Barq, ran qualitative research and affinity mapping, and designed a cleaner, Arabic-first alternative: instant transfers, QR payments, scheduled transfers, and a balance that’s easy to find.', did:'' },
+      ar:{ title:'نقد', kind:'دراسة حالة UX في التقنية المالية · فريق من 3', role:'بحث وتصميم تجربة المستخدم لفكرة تقنية مالية من معسكر نسق.', what:'دراسة حالة UI/UX تعيد التفكير في التحويلات المالية بالتطبيقات السعودية. درسنا نقاط الإزعاج في تطبيقات مثل STC Pay وبرق، وسوّينا بحث نوعي وخرائط تقارب، وصممنا بديل أنظف بالعربي أولًا: تحويل فوري، ودفع بـ QR، وتحويلات مجدولة، ورصيد سهل تلقاه.', did:'' },
+      tech:['Figma','UX Research','Prototyping'],
+      screens:[['w-nq-1','4/5','Naqd — 1'],['w-nq-2','4/5','Naqd — 2'],['w-nq-3','4/5','Naqd — 3'],['w-nq-4','4/5','Naqd — 4']] }
+  ];
+  T = {
+    en: {
+      navWork:'Work', navAbout:'About', navHi:'Say hi',
+      chipUni:'Software Engineering · KSU', chipCity:'Riyadh', chipCoop:'Open to a 2027 co-op',
+      h1a:'Hi, I’m', h1b:'Norah.',
+      intro:'I build software where logic meets people. Full-stack, AI & NLP, and the interfaces people actually touch.',
+      bubbles:['Hi! I’m Norah.', 'I build software where logic meets people.', 'Full-stack · AI & NLP · design.', 'Currently: looking for a 2027 co-op.'],
+      workA:'My', workB:'files', workSub:'~/norah/work — 6 folders · tap one to open', screens:'screens',
+      aboutA:'About', aboutB:'me',
+      bio:'I fell for software engineering for a reason most people don’t expect: it sits right where logic meets people. As a senior Software Engineering student at King Saud University, I work across the full stack and build real AI and NLP systems. I also care about designing interfaces people actually like using, and what draws me most is the human side of software: communication, product thinking, and understanding what people really need before building it.',
+      bioHi:'I bring both technical depth and strong communication to everything I build.',
+      expTitle:'Experience & education',
+      exp:[{a:'Sales Development Specialist',b:'Numa (a Nugttah company) · 2025'},{a:'B.S. Software Engineering',b:'King Saud University, CCIS · exp. 2027'},{a:'Volunteer Coordinator',b:'Student Partnership Program · 2024–2025'}],
+      certTitle:'Certifications',
+      certs:[{a:'UI/UX Design Bootcamp',b:'Nasq Camp, Future Technology Club, KSU (30 hours)'},{a:'Data Analysis Virtual Work Experience',b:'stc'},{a:'Generative AI Use Cases Workshop',b:'ICAN Conference (SDAIA & Elm)'}],
+      langTitle:'Languages', langs:'Arabic (native), English',
+      toolA:'Tool', toolB:'kit',
+      groups:['Engineering','AI & Data','Design','Practice'],
+      contactKick:'Looking for a 2027 co-op', contactA:'Let’s build', contactB:'something.',
+      copy:'© 2026 Norah Alaqeel · Riyadh',
+      close:'Close ✕', role:'My role', what:'What it is', did:'What I did',
+      beyondA:'Beyond the code', beyondNote:'(the good part)',
+      selfLine:'Artistic, a problem-solver, and I bring joy to every room I walk into.',
+      factsTitle:'Small truths:',
+      facts:['Wordle and Sudoku before anything else loads.','Raised by a loving, family-first house that\'s backed me since day one.','Gustav Klimt\'s "Death and Life" lives in my head rent-free.','I read my way up mountains I haven\'t hiked yet.','ctrl+Z is my love language.'],
+      klimt:'Klimt’s “Death and Life” — rent-free, forever.',
+      nowTitle:'Currently into', now:[{k:'Listening',v:'Lorde'},{k:'Reading',v:'Adventure + trail books (and too many Substacks)'},{k:'Playing',v:'NYT Wordle & Sudoku'}],
+      valuesTitle:'How I work',
+      values:['People first. Code second.','Solve it. Then make it beautiful.','Ship, learn, ctrl+Z, repeat.','Leave the room lighter than I found it.'],
+      loves:['Palm trees','Najdi patterns','Drawing','Travel','Trail books','Substack'],
+      storyTitle:'The short story →',
+      story:[{when:'Roots',k:'The farm',v:'A Saudi farming family. Palm trees, Najdi patterns, and a home that’s backed me since day one.'},{when:'2024–25',k:'People',v:'Coordinating volunteers. Learning that every project is a people project.'},{when:'2025',k:'Sales',v:'Discovery calls at Numa. Listen first, then build.'},{when:'Now → 2027',k:'Engineering',v:'Software Engineering at KSU. Next: a 2027 co-op.'}],
+      playA:'Beyond the', playB:'code', dailyLine:'A new word every day, and it’s hidden somewhere in this portfolio. Can you find it?', nextIn:'Next word in ', notWord:'Not in the word list.', whyKick:'Beat my Wordle', whyLine:'Wordle before anything else loads. It’s how I like to give my brain a little challenge, one word at a time.', offClock:['Drawing','Travel','Trail & adventure books','Too many Substacks','Lorde on repeat'], playSub:'Six letters, six tries, one word from my world. And I couldn’t leave Ctrl+Z out of this one, so you get one undo for a wrong guess, once per game.', undoKey:'ctrl+Z', undoUsed:'ctrl+Z is my love language. Guess undone.', undoNone:'Your one ctrl+Z is used. No more undos.', undoLeft:'ctrl+Z left: ', rulesTitle:'How to play', ruleG:'Right letter, right spot', ruleY:'In the word, wrong spot', ruleX:'Not in the word', hintBtn:'Need a hint?', newWord:'New word', win:'Genius. You got it in ', lose:'So close. The word was ', short:'Six letters, please.', played:'Played', wins:'Win %', streak:'Streak', hintPre:'Hint: ', dragHint:'psst — the stickers move ↓', psst:'try ctrl+Z', toast:'ctrl+Z — my love language. Stickers reset.'
+    },
+    ar: {
+      navWork:'أعمالي', navAbout:'عنّي', navHi:'تواصل معي',
+      chipUni:'هندسة برمجيات · جامعة الملك سعود', chipCity:'الرياض', chipCoop:'متاحة لتدريب تعاوني 2027',
+      h1a:'أهلًا، أنا', h1b:'نورة.',
+      intro:'أبني برمجيات يلتقي فيها المنطق بالإنسان. تطوير متكامل، ذكاء اصطناعي ومعالجة لغات، وتجارب رقمية تصنع فرق.',
+      bubbles:['أهلين! أنا نورة.', 'أبني برمجيات يلتقي فيها المنطق بالإنسان.', 'تطوير متكامل · ذكاء اصطناعي · تصميم.', 'حاليًا: أبحث عن تدريب تعاوني 2027.'],
+      workA:'ملفات', workB:'أعمالي', workSub:'٦ مجلدات · اضغط على أي مجلد لفتحه', screens:'شاشات',
+      aboutA:'من', aboutB:'أنا؟',
+      bio:'اللي جذبني لهندسة البرمجيات من البداية هو إنها مو بس أكواد وتقنيات، بل مجال يجمع بين فهم الناس وابتكار حلول تخدمهم.\n\nأنا طالبة هندسة برمجيات في جامعة الملك سعود، وعندي اهتمام بمختلف مراحل تطوير التطبيقات، من الواجهات إلى الأنظمة اللي تشتغل خلفها. أشتغل على مشاريع في الذكاء الاصطناعي ومعالجة اللغات الطبيعية (NLP)، وأستمتع بتصميم واجهات تجمع بين البساطة وسهولة الاستخدام.\n\nلكن أكثر جانب يحمّسني في هذا المجال هو التفكير في المنتج نفسه؛ كيف تبدأ الفكرة من احتياج حقيقي، وكيف نقدر نحولها إلى تجربة متكاملة لها قيمة عند المستخدم.\n\nأؤمن إن نجاح أي منتج تقني ما يعتمد على جودة برمجته فقط، بل على فهم المشكلة، والاهتمام بالتفاصيل، والتواصل الفعّال بين الأشخاص اللي يشتغلون عليه.',
+      bioHi:'وهذا بالضبط اللي أحاول أقدمه في كل مشروع أكون جزء منه.',
+      expTitle:'الخبرات والتعليم',
+      exp:[{a:'أخصائية تطوير مبيعات',b:'نوما (إحدى شركات نقطة) · 2025'},{a:'بكالوريوس هندسة البرمجيات',b:'جامعة الملك سعود، كلية علوم الحاسب والمعلومات · 2027'},{a:'منسقة متطوعين',b:'برنامج الشراكة الطلابية · 2024–2025'}],
+      certTitle:'الشهادات',
+      certs:[{a:'معسكر تصميم UI/UX',b:'معسكر نسق، نادي تقنية المستقبل، جامعة الملك سعود (30 ساعة)'},{a:'تجربة عمل افتراضية في تحليل البيانات',b:'stc'},{a:'ورشة حالات استخدام الذكاء الاصطناعي التوليدي',b:'مؤتمر ICAN (سدايا وعِلم)'}],
+      langTitle:'اللغات', langs:'العربية (اللغة الأم)، الإنجليزية',
+      toolA:'أدوا', toolB:'تي',
+      groups:['الهندسة','الذكاء الاصطناعي والبيانات','التصميم','الممارسة'],
+      contactKick:'أبحث عن تدريب تعاوني 2027', contactA:'خلّينا نبني', contactB:'شيء مميز.',
+      copy:'© 2026 نورة العقيل · الرياض',
+      close:'إغلاق ✕', role:'دوري', what:'عن المشروع', did:'ما قمت به',
+      beyondA:'بعيدًا عن الكود', beyondNote:'(الجزء الحلو)',
+      selfLine:'فنّانة، أحب حل المشكلات، وأدخل الفرحة على أي مكان أدخله.',
+      factsTitle:'حقائق صغيرة:',
+      facts:['Wordle وSudoku قبل أي شيء.','تربّيت في بيت محب، العائلة فيه أولًا، وقف معي من أول يوم.','لوحة كليمت «الموت والحياة» ساكنة في بالي.','أتسلّق الجبال بالقراءة قبل ما أمشيها.','ctrl+Z لغة الحب عندي.'],
+      klimt:'«الموت والحياة» لكليمت — ساكنة في بالي للأبد.',
+      nowTitle:'هذي الأيام', now:[{k:'أسمع',v:'Lorde'},{k:'أقرأ',v:'كتب مغامرات ومسارات (واشتراكات Substack كثيرة)'},{k:'ألعب',v:'Wordle وSudoku من NYT'}],
+      valuesTitle:'طريقتي في الشغل',
+      values:['الإنسان أولًا، الكود ثانيًا.','أحل المشكلة، ثم أجمّلها.','أطلق، أتعلم، ctrl+Z، وأعيد.','أترك المكان أخف مما لقيته.'],
+      loves:['النخل','النقوش النجدية','الرسم','السفر','كتب المسارات','Substack'],
+      storyTitle:'القصة باختصار ←',
+      story:[{when:'الجذور',k:'المزرعة',v:'عائلة سعودية مزارعة. نخل، ونقوش نجدية، وبيت وقف معي من أول يوم.'},{when:'2024–25',k:'الناس',v:'تنسيق المتطوعين. تعلّمت إن كل مشروع هو مشروع ناس.'},{when:'2025',k:'المبيعات',v:'مكالمات الاستكشاف في نُما. أسمع أولًا، ثم أبني.'},{when:'الآن ← 2027',k:'الهندسة',v:'هندسة البرمجيات في جامعة الملك سعود. التالي: تدريب تعاوني 2027.'}],
+      playA:'بعيدًا عن', playB:'الأكواد', dailyLine:'كل يوم كلمة جديدة، ومخبأة بين تفاصيل البورتفوليو. تقدر تلقاها؟', nextIn:'الكلمة الجاية بعد ', notWord:'الكلمة مو موجودة في القاموس.', whyKick:'تحدى Wordle ', whyLine:'من الأشياء اللي أستمتع فيها لعبة Wordle. تحدّي بسيط أحب أختبر فيه تفكيري، كلمة وراء كلمة.', offClock:['الرسم','السفر','كتب المغامرات والمسارات','اشتراكات Substack كثيرة','Lorde على التكرار'], playSub:'ستة أحرف، وست محاولات، وكلمة من عالمي. وطبعًا ما قدرت أستغني عن Ctrl+Z حتى هنا، فعندك فرصة تتراجع عن تخمين غلط، مرة وحدة في كل جولة.', undoKey:'ctrl+Z', undoUsed:'ctrl+Z لغة الحب عندي. رجّعت تخمينك.', undoNone:'استخدمت الـ ctrl+Z حقك. ما فيه تراجع ثاني.', undoLeft:'باقي ctrl+Z: ', rulesTitle:'طريقة اللعب', ruleG:'حرف صحيح في مكانه', ruleY:'الحرف موجود بس في مكان ثاني', ruleX:'الحرف مو موجود', hintBtn:'تبي تلميح؟', newWord:'كلمة جديدة', win:'عبقري! حلّيتها في ', lose:'قريب! الكلمة كانت ', short:'لازم ست حروف.', played:'لعبت', wins:'نسبة الفوز', streak:'متتالي', hintPre:'تلميح: ', dragHint:'تقدر تحرّك الملصقات ↓', psst:'جرّب ctrl+Z', toast:'ctrl+Z — لغة الحب عندي. رجّعت الملصقات.'
+    }
+  };
+  keySkills = ['Python','Flutter','FastAPI','PostgreSQL','Firebase','NLP','LLMs','Qwen2.5 + LoRA (PEFT)','Machine Learning','Figma','UX Research','Prototyping','SDLC','Agile','Git & GitHub'];
+  skillItems = [
+    ['Python','Java','Dart','SQL','JavaScript','Flutter','FastAPI','Firebase','PostgreSQL','REST APIs','Back-End Development','OAuth 2.0','Stripe Connect'],
+    ['NLP','LLMs','Generative AI','Machine Learning','Qwen2.5 + LoRA (PEFT)','Prompt Engineering','Hugging Face','scikit-learn','XGBoost','pandas','Data Preparation','Data Analysis'],
+    ['Figma','UI Design','UX Research','User Interviews','Wireframing','Prototyping','Usability Testing','Usability Labs'],
+    ['Git & GitHub','SDLC','Agile','Waterfall','Software Maintenance','OOP','MVC','Testing','Problem Solving','Communication']
+  ];
+  componentDidMount() {
+    const ease = 'cubic-bezier(.2,.8,.2,1)';
+    const motion = this.props.motion !== false;
+    if (motion) {
+      document.querySelectorAll('[data-blob]').forEach((el, i) => {
+        const d = [[8,6],[-7,9],[10,-6],[-9,-8]][i];
+        el.animate([{ transform:'translate(0,0) scale(1)' }, { transform:`translate(${d[0]}vw,${d[1]}vh) scale(1.15)` }],
+          { duration: 14000 + i * 3000, direction:'alternate', iterations: Infinity, easing:'ease-in-out' });
+      });
+      document.querySelectorAll('[data-float]').forEach(el => el.animate(
+        [{ transform:'translateY(0) rotate(-2deg)' }, { transform:'translateY(-18px) rotate(2deg)' }],
+        { duration: 3200, direction:'alternate', iterations: Infinity, easing:'ease-in-out' }));
+      document.querySelectorAll('[data-pulse]').forEach(el => el.animate([{ opacity:1 }, { opacity:.3 }], { duration:1000, direction:'alternate', iterations:Infinity }));
+      document.querySelectorAll('[data-hero]').forEach((el, i) => el.animate(
+        [{ opacity:0, transform:'translateY(40px) scale(.98)', filter:'blur(8px)' }, { opacity:1, transform:'none', filter:'blur(0)' }],
+        { duration:1000, delay:100 + i * 110, easing:ease, fill:'backwards' }));
+      this.io = new IntersectionObserver(es => es.forEach(e => {
+        if (e.isIntersecting) { e.target.style.opacity = 1; e.target.style.transform = 'none'; e.target.style.filter = 'none'; this.io.unobserve(e.target); }
+      }), { threshold: 0.12 });
+      document.querySelectorAll('[data-reveal]').forEach(el => {
+        if (el.getBoundingClientRect().top < innerHeight * .95) return;
+        el.style.opacity = 0; el.style.transform = 'translateY(50px) scale(.98)'; el.style.filter = 'blur(6px)';
+        el.style.transition = `opacity .9s ${ease}, transform .9s ${ease}, filter .9s ${ease}`;
+        this.io.observe(el);
+      });
+    }
+    this.onMove = e => {
+      const el = this.tiltRef.current; if (!el || !motion) return;
+      const x = e.clientX / innerWidth - .5, y = e.clientY / innerHeight - .5;
+      el.style.transform = `perspective(900px) rotateY(${x * 18}deg) rotateX(${-y * 14}deg) translate(${x * 16}px,${y * 12}px)`;
+    };
+    this.initStickers();
+    fetch('https://cdn.jsdelivr.net/npm/an-array-of-english-words@2.0.0/index.json').then(r => r.ok ? r.json() : null).then(a => { if (Array.isArray(a)) this.dict = new Set(a.filter(x => x.length === 6 && /^[a-z]+$/.test(x)).map(x => x.toUpperCase())); }).catch(() => {});
+    this.ct = setInterval(() => this.setState({ now: Date.now() }), 30000);
+    this.pio = new IntersectionObserver(([en]) => { this.armed = en.isIntersecting; }, { threshold: 0.4 });
+    this.playRef.current && this.pio.observe(this.playRef.current);
+    this.mt = setInterval(() => { if (!this.mojiHold) this.setState(s => ({ moji: 1 - s.moji })); }, 2800);
+    this.onKey = e => {
+      if (this.state.open < 0 && this.armed && (e.ctrlKey || e.metaKey) && (e.key === 'z' || e.key === 'Z')) { e.preventDefault(); this.undo(); return; }
+      if (this.state.open < 0 && this.armed && !e.ctrlKey && !e.metaKey && !e.altKey) {
+        if (e.key === 'Enter') { e.preventDefault(); this.press('ENTER'); return; }
+        if (e.key === 'Backspace') { e.preventDefault(); this.press('DEL'); return; }
+        if (/^[a-zA-Z]$/.test(e.key)) { this.press(e.key.toUpperCase()); return; }
+      }
+      if (this.state.open < 0) return;
+      if (e.key === 'Escape') this.setOpen(-1);
+      if (e.key === 'ArrowRight') this.step(1);
+      if (e.key === 'ArrowLeft') this.step(-1);
+    };
+    addEventListener('mousemove', this.onMove);
+    addEventListener('keydown', this.onKey);
+    this.t = setInterval(() => this.setState(s => ({ b: (s.b + 1) % 4 })), 3200);
+    document.documentElement.lang = this.state.lang;
+  }
+  pdfRef = React.createRef();
+  pdfLib() {
+    return this._lib || (this._lib = import('https://cdn.jsdelivr.net/npm/pdfjs-dist@4.10.38/build/pdf.min.mjs').then(m => { m.GlobalWorkerOptions.workerSrc = 'https://cdn.jsdelivr.net/npm/pdfjs-dist@4.10.38/build/pdf.worker.min.mjs'; return m; }));
+  }
+  async mountPdf() {
+    const el = this.pdfRef.current, p = this.P[this.state.open];
+    if (!el || !p || !p.pdf || el.dataset.ready) return;
+    el.dataset.ready = '1';
+    if (this._io) this._io.disconnect();
+    const ld = document.createElement('div');
+    ld.textContent = this.state.lang === 'ar' ? 'جاري تحميل دراسة الحالة…' : 'Loading case study…';
+    ld.style.cssText = "padding:80px 20px;text-align:center;font-family:'DM Mono',monospace;font-size:13px;opacity:.6";
+    el.appendChild(ld);
+    try {
+      const lib = await this.pdfLib();
+      this._docs = this._docs || {};
+      const doc = await (this._docs[p.pdf] || (this._docs[p.pdf] = lib.getDocument(p.pdf).promise));
+      if (this.pdfRef.current !== el) return;
+      ld.remove();
+      let queue = Promise.resolve();
+      const io = this._io = new IntersectionObserver(es => es.forEach(en => {
+        const c = en.target;
+        if (en.isIntersecting && !c._done) {
+          c._done = true;
+          queue = queue.then(async () => {
+            if (!c.isConnected) return;
+            const W = Math.round(c.clientWidth * Math.min(window.devicePixelRatio || 1, 2)), k = W / c._pw;
+            c.width = W; c.height = Math.ceil(c._h * k);
+            await c._page.render({ canvasContext: c.getContext('2d'), viewport: c._page.getViewport({ scale: k }), transform: [1, 0, 0, 1, 0, -c._top * k] }).promise;
+          }).catch(() => { c._done = false; });
+        } else if (!en.isIntersecting && c._done) { queue = queue.then(() => { c.width = 1; c.height = 1; c._done = false; }); }
+      }), { root: this.winRef.current, rootMargin: '1600px 0px' });
+      const dispW = el.clientWidth || 800;
+      for (let n = 1; n <= doc.numPages; n++) {
+        const page = await doc.getPage(n), v = page.getViewport({ scale: 1 });
+        const stripPt = v.width * (1400 / dispW);
+        for (let top = 0; top < v.height - 0.5; top += stripPt) {
+          const hPt = Math.min(stripPt, v.height - top), c = document.createElement('canvas');
+          Object.assign(c, { _page: page, _pw: v.width, _top: top, _h: hPt });
+          c.width = 1; c.height = 1;
+          c.style.cssText = 'display:block;width:100%;aspect-ratio:' + v.width + '/' + hPt + ';margin-top:' + (top ? '-1px' : '0');
+          el.appendChild(c); io.observe(c);
+        }
+      }
+    } catch (err) { ld.textContent = this.state.lang === 'ar' ? 'تعذّر تحميل دراسة الحالة' : 'Couldn’t load the case study'; }
+  }
+  componentDidUpdate() {
+    if (this.state.open >= 0 && this.P[this.state.open].pdf) setTimeout(() => this.mountPdf(), 60);
+    const prev = this._prev || { lang: null, open: -1 };
+    this._prev = { lang: this.state.lang, open: this.state.open };
+    if (prev.lang !== this.state.lang) document.documentElement.lang = this.state.lang;
+    if (prev.open !== this.state.open) {
+      document.body.style.overflow = this.state.open >= 0 ? 'hidden' : '';
+      const w = this.winRef.current;
+      if (w && this.state.open >= 0) {
+        w.scrollTop = 0;
+        if (prev.open < 0) w.animate([{ opacity:0, transform:'scale(.6) translateY(80px)', filter:'blur(10px)' }, { opacity:1, transform:'none', filter:'blur(0)' }], { duration:520, easing:'cubic-bezier(.2,.9,.25,1.15)' });
+      }
+    }
+  }
+  componentWillUnmount() {
+    removeEventListener('mousemove', this.onMove); removeEventListener('keydown', this.onKey);
+    clearInterval(this.t); clearInterval(this.mt); clearInterval(this.ct); this.pio && this.pio.disconnect(); this.io && this.io.disconnect(); document.body.style.overflow = '';
+  }
+  setOpen = i => this.setState({ open: i });
+  score(g, w) {
+    const r = Array(6).fill('x'), left = {};
+    for (let i = 0; i < 6; i++) { if (g[i] === w[i]) r[i] = 'g'; else left[w[i]] = (left[w[i]] || 0) + 1; }
+    for (let i = 0; i < 6; i++) if (r[i] !== 'g' && left[g[i]]) { r[i] = 'y'; left[g[i]]--; }
+    return r;
+  }
+  press = k => {
+    const s = this.state; if (s.done && k !== 'NEW') return;
+    if (k === 'DEL') return this.setState({ cur: s.cur.slice(0, -1), msg: '' });
+    if (k === 'ENTER') {
+      const T = this.T[s.lang];
+      if (s.cur.length < 6) { this.shake(s.g.length); return this.setState({ msg: T.short }); }
+      if (this.dict && !this.dict.has(s.cur) && !this.WORDS.some(x => x[0] === s.cur)) { this.shake(s.g.length); return this.setState({ msg: T.notWord }); }
+      const w = this.WORDS[s.wi][0], g = [...s.g, s.cur], win = s.cur === w, lose = !win && g.length === 6;
+      let stats = s.stats;
+      if (win || lose) { stats = { p: stats.p + 1, w: stats.w + (win ? 1 : 0), s: win ? stats.s + 1 : 0 }; try { localStorage.setItem('norah-wordle', JSON.stringify(stats)); } catch (e) {} }
+      this.setState({ g, cur: '', done: win || lose, stats, msg: win ? T.win + g.length + '/6' : lose ? T.lose + w : '' }, () => this.flip(g.length - 1, win));
+      return;
+    }
+    if (s.cur.length < 6) this.setState({ cur: s.cur + k, msg: '' });
+  };
+  flip(i, win) {
+    const row = document.querySelector('[data-row="' + i + '"]'); if (!row) return;
+    [...row.children].forEach((el, j) => el.animate([{ transform:'rotateX(90deg)' }, { transform:'rotateX(0)' }], { duration: 380, delay: j * 90, easing: 'ease-out', fill: 'backwards' }));
+    if (win) setTimeout(() => [...row.children].forEach((el, j) => el.animate([{ transform:'translateY(0)' }, { transform:'translateY(-14px)' }, { transform:'translateY(0)' }], { duration: 400, delay: j * 70 })), 700);
+  }
+  shake(i) {
+    const row = document.querySelector('[data-row="' + i + '"]');
+    row && row.animate([{ transform:'translateX(0)' }, { transform:'translateX(-8px)' }, { transform:'translateX(8px)' }, { transform:'translateX(0)' }], { duration: 300 });
+  }
+  undo = () => {
+    const s = this.state, T = this.T[s.lang];
+    if (s.cur.length) return this.setState({ cur: s.cur.slice(0, -1) });
+    if (s.undone) return this.setState({ msg: T.undoNone });
+    if (!s.g.length || (s.done && s.g[s.g.length - 1] === this.WORDS[s.wi][0])) return;
+    this.setState({ g: s.g.slice(0, -1), done: false, undone: true, msg: T.undoUsed });
+  };
+  newWord = () => this.setState(s => { let wi; do { wi = Math.floor(Math.random() * this.WORDS.length); } while (wi === s.wi); return { wi, g: [], cur: '', done: false, msg: '', hintOn: false, undone: false }; });
+  flipWordle = () => {
+    if (this.flipping) return; this.flipping = true;
+    document.querySelectorAll('[data-tile]').forEach((el, i) => el.animate(
+      [{ transform:'rotateX(0)' }, { transform:'rotateX(90deg)' }, { transform:'rotateX(0)' }], { duration:500, delay:i * 120, easing:'ease-in-out' }));
+    setTimeout(() => { this.flipping = false; }, 1200);
+  };
+  initStickers() {
+    document.querySelectorAll('[data-sticker]').forEach(el => {
+      const base = el.style.transform || '';
+      el.dataset.base = base; el.dataset.dx = 0; el.dataset.dy = 0;
+      el.addEventListener('pointerdown', e => {
+        e.preventDefault(); el.setPointerCapture(e.pointerId); el.style.cursor = 'grabbing';
+        const sx = e.clientX - +el.dataset.dx, sy = e.clientY - +el.dataset.dy;
+        el.style.transition = 'none'; el.style.zIndex = 5;
+        const mv = ev => { el.dataset.dx = ev.clientX - sx; el.dataset.dy = ev.clientY - sy;
+          el.style.transform = `translate(${el.dataset.dx}px,${el.dataset.dy}px) ${base} scale(1.08)`; };
+        const up = () => { el.style.cursor = 'grab'; el.style.transform = `translate(${el.dataset.dx}px,${el.dataset.dy}px) ${base}`;
+          el.removeEventListener('pointermove', mv); el.removeEventListener('pointerup', up); };
+        el.addEventListener('pointermove', mv); el.addEventListener('pointerup', up);
+      });
+    });
+  }
+  resetStickers() {
+    document.querySelectorAll('[data-sticker]').forEach(el => {
+      el.dataset.dx = 0; el.dataset.dy = 0; el.style.transition = 'transform .6s cubic-bezier(.2,.9,.25,1.2)'; el.style.transform = el.dataset.base;
+    });
+    clearTimeout(this.tt); this.setState({ toast: true }); this.tt = setTimeout(() => this.setState({ toast: false }), 2600);
+  }
+  step = d => this.setState(s => ({ open: (s.open + d + this.P.length) % this.P.length }));
+  toggleLang = () => this.setState(s => {
+    const lang = s.lang === 'en' ? 'ar' : 'en';
+    try { localStorage.setItem('norah-lang', lang); } catch (e) {}
+    return { lang };
+  });
+  gameVals(t) {
+    const s = this.state, w = this.WORDS[s.wi][0], C = { g:['#2F8A5F','#F3EADB','#2F8A5F'], y:['#D9A84E','#0C1319','#D9A84E'], x:['rgba(255,255,255,.1)','rgba(243,234,219,.55)','rgba(255,255,255,.04)'] };
+    const keyState = {};
+    const rows = Array.from({ length: 6 }, (_, i) => {
+      const g = s.g[i], typing = i === s.g.length && !s.done, sc = g ? this.score(g, w) : null;
+      if (g) g.split('').forEach((l, j) => { const v = sc[j], o = keyState[l]; if (v === 'g' || (v === 'y' && o !== 'g') || (!o)) keyState[l] = v; });
+      return { i, cells: Array.from({ length: 6 }, (_, j) => {
+        if (g) { const c = C[sc[j]]; return { l: g[j], bg: c[0], fg: c[1], bd: c[2] }; }
+        const l = typing ? (s.cur[j] || '') : '';
+        return { l, bg: 'transparent', fg: '#F3EADB', bd: l ? 'rgba(243,234,219,.7)' : 'rgba(255,255,255,.16)' };
+      }) };
+    });
+    const mk = (k) => { const st = keyState[k], c = st ? C[st] : null, wide = k.length > 1;
+      return { label: k === 'DEL' ? '⌫' : k === 'ENTER' ? 'Enter' : k, flex: wide ? '1.6' : '1', fs: wide ? '13px' : '16px',
+        bg: c ? (st === 'x' ? 'rgba(255,255,255,.04)' : c[0]) : 'rgba(255,255,255,.14)', fg: c ? c[1] : '#F3EADB', press: () => this.press(k) }; };
+    const kb = ['QWERTYUIOP', 'ASDFGHJKL', 'ZXCVBNM'].map((r, i) => { const ks = r.split('').map(mk); if (i === 2) { ks.unshift(mk('ENTER')); ks.push(mk('DEL')); } return ks; });
+    const st = s.stats;
+    return { rows, kb, msg: s.msg, hintOn: s.hintOn, hintText: t.hintPre + this.WORDS[s.wi][s.lang === 'ar' ? 2 : 1],
+      countdown: (() => { const d = this.dayIndex(), ms = (d + 1) * 864e5 - (s.now + 3 * 36e5), hh = Math.floor(ms / 36e5), mm = Math.floor(ms % 36e5 / 6e4); return s.lang === 'ar' ? hh + ' س ' + mm + ' د' : hh + 'h ' + mm + 'm'; })(),
+      showHint: () => this.setState({ hintOn: true }), newWord: this.newWord, undo: this.undo, undoLabel: '⌘/ctrl+Z · ' + (s.undone ? 0 : 1),
+      statList: [{ k: t.played, v: st.p }, { k: t.wins, v: st.p ? Math.round(st.w / st.p * 100) : 0 }, { k: t.streak, v: st.s }] };
+  }
+  renderVals() {
+    const L = this.state.lang, ar = L === 'ar', t = this.T[L];
+    const f = ar
+      ? { display:"'Lalezar',sans-serif", body:"'IBM Plex Sans Arabic',sans-serif", mono:"'IBM Plex Sans Arabic',sans-serif", hand:"'Aref Ruqaa',serif", lh:'1.35', h1lh:'1.02', ls:'0', lsSm:'0' }
+      : { display:"'Unbounded',sans-serif", body:"'Figtree',system-ui,sans-serif", mono:"'DM Mono',monospace", hand:"'Caveat',cursive", lh:'.9', h1lh:'.86', ls:'-.05em', lsSm:'-.03em' };
+    const o = this.state.open, c = this.P[Math.max(o, 0)], cl = c[L];
+    const cur = { slug:c.slug, n:c.n, tech:c.tech, ...cl, what: cl.what || cl.kind, pdf: c.pdf || '', hasScreens: c.screens.length > 0,
+      screens: c.screens.map(([id, ratio, ph]) => ({ id, ratio, ph, radius: ratio.startsWith('9') ? '26' : '18', wr: (([x, y]) => (x / y).toFixed(4))(ratio.split('/').map(Number)), src: id.startsWith('w-') ? 'assets/work/' + id.slice(2) + '.jpg' : '' })) };
+    return {
+      t, f, dir: ar ? 'rtl' : 'ltr',
+      enBg: ar ? 'transparent' : '#F3EADB', enFg: ar ? '#F3EADB' : '#0C1319',
+      arBg: ar ? '#F3EADB' : 'transparent', arFg: ar ? '#0C1319' : '#F3EADB',
+      playRef: this.playRef,
+      waveOp: this.state.moji ? 0 : 1, ideaOp: this.state.moji ? 1 : 0,
+      waveSc: this.state.moji ? '.9' : '1', ideaSc: this.state.moji ? '1' : '.9',
+      waveRot: this.state.moji ? '-6deg' : '0deg', ideaRot: this.state.moji ? '0deg' : '6deg',
+      toggleMoji: () => this.setState(s => ({ moji: 1 - s.moji })),
+      mojiIdea: () => { this.mojiHold = true; this.setState({ moji: 1 }); },
+      mojiWave: () => { this.mojiHold = false; this.setState({ moji: 0 }); },
+      ...this.gameVals(t),
+      nm: ar ? { c:'transparent', bg:'linear-gradient(180deg,#FFF7DD 0%,#F1CF7A 26%,#9C6A22 47%,#F7DE92 60%,#C08A32 80%,#FFE9A8 100%)', f:'drop-shadow(0 2px 0 #6B2D5C) drop-shadow(0 3px 0 #3E1836) drop-shadow(0 14px 20px rgba(0,0,0,.5))' } : { c:'#5FB38A', bg:'none', f:'none' },
+      ch: { cG:'#F2C75C', cT:'#F2C75C', bg:'none', clip:'border-box', filter:'drop-shadow(0 2px 0 #6B2D5C) drop-shadow(0 3px 0 #3E1836) drop-shadow(0 14px 20px rgba(0,0,0,.5))', pb:'0', lh:'inherit' },
+      toggleLang: this.toggleLang, accDisp: ar ? 'none' : 'inline-block', toast: this.state.toast,
+      wordle: [['N','#538D4E'],['O','#B59F3B'],['R','#538D4E'],['A','#3A3A3C'],['H','#538D4E']].map(([l,c]) => ({ l, c })),
+      flipWordle: this.flipWordle,
+      bubble: t.bubbles[this.state.b],
+      tiltRef: this.tiltRef, winRef: this.winRef, pdfRef: this.pdfRef,
+      projects: this.P.map((p, i) => ({ ...this.colors[i], n:p.n, title:p[L].title, short:p[L].kind.split(' · ')[0], count: p.pdf ? '' : p.screens.length, unit: p.pdf ? (ar ? 'دراسة حالة' : 'case study') : t.screens, open: () => this.setOpen(i) })),
+      isOpen: o >= 0, cur, tagJustify: ar ? 'flex-end' : 'flex-start',
+      close: () => this.setOpen(-1), stop: e => e.stopPropagation(),
+      next: () => this.step(1), prev: () => this.step(-1),
+      storyC: t.story.map((s, i) => ({ ...s, c: ['#7FC9A0','#9FD0C8','#E07A4F','#D9A84E'][i] })),
+      skills: t.groups.map((title, i) => ({ title, items: this.skillItems[i].map(n => { const hi = this.keySkills.includes(n); return hi
+        ? { n, bg:'linear-gradient(180deg,rgba(241,207,122,.22),rgba(217,168,78,.10))', bd:'rgba(241,207,122,.55)', sh:'inset 0 1px 0 rgba(255,240,200,.45),0 0 22px rgba(217,168,78,.22)', fg:'#FBEFD2', fw:'600' }
+        : { n, bg:'rgba(255,255,255,0.06)', bd:'rgba(255,255,255,.14)', sh:'inset 0 1px 0 rgba(255,255,255,.18)', fg:'rgba(243,234,219,.82)', fw:'500' }; }), justify: ar ? 'flex-end' : 'flex-start' }))
+    };
+  }
+}
+</script>
+</body>
+</html>
