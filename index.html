@@ -5,6 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Norah Alaqeel — نورة العقيل</title>
 <meta name="description" content="I build software where logic meets people.">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://norah-alaqeel.vercel.app/">
 <meta property="og:title" content="Norah Alaqeel — نورة العقيل">
@@ -16,8 +18,6 @@
 <meta name="twitter:title" content="Norah Alaqeel — نورة العقيل">
 <meta name="twitter:description" content="I build software where logic meets people.">
 <meta name="twitter:image" content="https://norah-alaqeel.vercel.app/assets/og-image.png">
-<link rel="icon" type="image/svg+xml" href="/favicon.svg">
-<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <script src="./support.js"></script>
 </head>
 <body>
@@ -237,7 +237,7 @@ a:hover{color:#D9A84E}
         <div style="display:flex;flex-direction:column;gap:clamp(10px,1.6vw,18px);width:min(100%,820px);margin:0 auto;min-width:0">
           <sc-for list="{{ cur.screens }}" as="s" hint-placeholder-count="3">
             <div style="width:100%;aspect-ratio:{{ s.ratio }};position:relative;border-radius:clamp(12px,1.6vw,22px);overflow:hidden;background:rgba(255,255,255,.04);box-shadow:0 20px 50px rgba(0,0,0,.35);content-visibility:auto;contain-intrinsic-size:auto 900px">
-              <image-slot id="{{ s.id }}" shape="rounded" radius="{{ s.radius }}" src="{{ s.src }}" fit="contain" placeholder="{{ s.ph }}"></image-slot>
+              <img src="{{ s.src }}" alt="{{ s.ph }}" loading="lazy" decoding="async" draggable="false" style="display:block;width:100%;height:100%;object-fit:contain;pointer-events:none;-webkit-user-select:none;user-select:none">
             </div>
           </sc-for>
         </div>
